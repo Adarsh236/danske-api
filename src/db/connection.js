@@ -10,9 +10,7 @@ mongoose.set('useCreateIndex', true);
 if (env === 'production') {
     // Using mongoose to connect to MLAB
     //database(Create new database single node free and create new user and set name and password)
-    mongoose.connect(
-        `mongodb://${mongo.MONGO_USER}:${mongo.MONGO_PW}@ds161630.mlab.com:61630/passport`
-    );
+    mongoose.connect(mongoDBConnection);
 } else {
     mongoose.connect(mongoDBConnection), { useMongoClient: true };
 }
