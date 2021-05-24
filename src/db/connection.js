@@ -7,13 +7,15 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useCreateIndex', true);
 
-if (env === 'production') {
+/* if (env === 'production') {
     // Using mongoose to connect to MLAB
     //database(Create new database single node free and create new user and set name and password)
     mongoose.connect(mongoDBConnection);
 } else {
     mongoose.connect(mongoDBConnection), { useMongoClient: true };
-}
+} */
+
+mongoose.connect(mongoDBConnection);
 
 // Signal connection
 mongoose.connection
