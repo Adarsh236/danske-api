@@ -10,6 +10,7 @@ export const mongo = {
     MONGO_PW: process.env.MONGO_PW,
 };
 
-const runLocal = 'mongodb://localhost:27017/restAPI';
+const runLocal = 'mongodb://localhost:27017/DanskeAPI';
+const runWeb = process.env.MONGODB_URL;
 
-export const mongoDBConnection = runLocal;
+export const mongoDBConnection = runWeb;
